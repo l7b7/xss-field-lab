@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.log
+*.tar.gz
+*.zip
+lab-progress/
+private-notes/
+.DS_Store

@@ -1,0 +1,24 @@
+name: Exercise issue or lesson suggestion
+description: Report a model mismatch, unclear explanation or proposed lesson.
+body:
+  - type: markdown
+    attributes:
+      value: For sandbox escapes or private data exposure, follow SECURITY.md instead of posting details here.
+  - type: input
+    id: exercise
+    attributes:
+      label: Exercise ID
+      placeholder: first-reflection
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation and expected behavior
+      description: Use an inert marker. Do not include credentials or personal information.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and commit/version

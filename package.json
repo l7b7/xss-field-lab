@@ -1,0 +1,1 @@
+{"name":"xss-field-lab","private":true,"type":"module","scripts":{"test":"node --test tests/*.test.mjs","check":"node --check dist/app.js && node --check dist/engine.js && node --check dist/curriculum.js"}}

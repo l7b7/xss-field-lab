@@ -1,0 +1,26 @@
+name: Validate lab and coach
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Validate shell syntax
+        run: bash -n scripts/install-skill.sh
+      - name: Check JavaScript syntax
+        run: npm run check
+      - name: Run exercise and packaging regressions
+        run: npm test

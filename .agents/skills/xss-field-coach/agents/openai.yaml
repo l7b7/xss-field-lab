@@ -1,0 +1,4 @@
+interface:
+  display_name: "XSS Field Coach"
+  short_description: "Guided XSS labs, context tracing, and evidence review"
+  default_prompt: "Use $xss-field-coach to guide me through the XSS Field Lab and review my evidence step by step."
